@@ -24,6 +24,7 @@ import dotenv from 'dotenv';
  import BookmarkController from './controllers/BookmarkController';
  import AuthenticationController from "./controllers/AuthenticationController";
  import mongoose from "mongoose";
+import TopicController from "./controllers/TopicController";
  const cors = require("cors");
  const session = require("express-session");
 
@@ -78,6 +79,7 @@ import dotenv from 'dotenv';
  const followController = FollowController.getInstance(app);
  const messageController = MessageController.getInstance(app);
  const bookmarkController = BookmarkController.getInstance(app);
+ const topicController = TopicController.getInstance(app);
  AuthenticationController(app);
  /**
   * Start a server listening at port 4000 locally
