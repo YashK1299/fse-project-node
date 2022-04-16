@@ -62,10 +62,10 @@
              {_id: uid},
              {$set: user});
      
-     updateUserSalaryByUsername = async (username: string, salary: number): Promise<any> =>
+     updateUserPasswordByUsername = async (username: string, password: number): Promise<any> =>
          UserModel.updateOne(
-             {username},
-             {$set: {salary: salary}});
+             {_id: username},
+             {$set: {password: password}});
  
      /**
       * Removes user from the database.
