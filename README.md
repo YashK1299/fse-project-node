@@ -1,1 +1,2 @@
-# fse-project-node
+# software-engineering-node
+Backend of the social media app
