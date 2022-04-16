@@ -9,6 +9,7 @@ import TopicDaoI from "../interfaces/TopicDaoI";
 import Topic from "../models/Topic";
 import TopicModel from "../mongoose/TopicModel";
 import TuitModel from "../mongoose/TuitModel";
+import TopicToTuitModel from "../mongoose/TopicToTuitModel";
 
 /**
  * @class LikeDao Implements Data Access Object managing data storage
@@ -45,10 +46,13 @@ export default class TopicDao implements TopicDaoI {
         TopicModel.deleteOne({_id: tid});
 
     findAllTuitsByTopic = async (tid: string): Promise<any>=>
-        TuitModel
+        TopicToTuitModel
             .find({topic: tid})
-            .populate("tuits")
+            .populate("tuit")
             .exec();
     findAllTopics = async (): Promise<any>=>
         TopicModel.find();
+
+    addTopicToTuit = async (tuitid: string, topicid: string): Promise<any> =>
+        TopicToTuitModel.create({topic:topicid,tuit:tuitid});
 }

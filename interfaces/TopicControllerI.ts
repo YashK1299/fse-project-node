@@ -8,4 +8,5 @@ export default interface TopicControllerI {
     deleteTopic (req: Request, res: Response): void;
     findAllTuitsByTopic (req: Request, res: Response): void;
     findAllTopics ( req: Request, res: Response): void;
+    addTopicToTuit (req: Request, res: Response): void;
 };
