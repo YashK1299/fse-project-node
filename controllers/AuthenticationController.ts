@@ -27,6 +27,27 @@ const AuthenticationController = (app: Express) => {
       res.json(insertedUser);
     }
   }
+
+  const reset = async (req: Request, res: Response) => {
+    const user = req.body;
+    const password = user.password;
+    const hash = await bcrypt.hash(password, saltRounds);
+    user.password = hash;
+
+    const existingUser = await userDao
+        .findUserByUsername(user.username);
+    if (existingUser) {
+      const insertedUser = await userDao
+          .updateUserPasswordByUsername(existingUser._id, password);
+      insertedUser.password = '';
+      //@ts-ignore
+      req.session['profile'] = insertedUser;
+      res.json(insertedUser);
+    } else {
+      res.sendStatus(403);
+      return;
+    }
+  }
   
   const profile = (req: Request, res: Response) => {
     //@ts-ignore
@@ -74,6 +95,7 @@ const AuthenticationController = (app: Express) => {
   app.post("/api/auth/profile", profile);
   app.post("/api/auth/logout", logout);
   app.post("/api/auth/signup", signup);
+  app.post("/api/auth/resetpassword", reset);
 }
 
 export default AuthenticationController;

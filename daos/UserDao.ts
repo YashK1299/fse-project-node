@@ -66,6 +66,17 @@
          UserModel.updateOne(
              {username},
              {$set: {salary: salary}});
+     
+     /**
+      * Updates password of user in database
+      * @param {string} uid Primary key of user to be modified
+      * @param {User} passwrod new password to be set for the user
+      * @returns Promise To be notified when user is updated in the database
+      */
+    updateUserPasswordByUsername = async (uid: string, password: string): Promise<any> =>
+         UserModel.updateOne(
+             {_id: uid},
+             {$set: {password: password}});
  
      /**
       * Removes user from the database.
