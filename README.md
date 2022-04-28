@@ -13,4 +13,4 @@ This repository is the implementation of the backend of the social media app Tui
 7. REACT_APP_BASE_URL
 * Clone the react app repository from: https://github.com/YashK1299/fse-project-react
 * Create a .env file similar to above and add all the following environment variables to it:
-1. NODE_APP_BASE_URL
+1. REACT_APP_BASE_URL
