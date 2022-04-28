@@ -18,6 +18,8 @@ export default class TopicController implements TopicControllerI {
             app.delete("/api/topics/:tid", TopicController.topicController.deleteTopic);
             app.get("/api/topics/:tid/tuits",TopicController.topicController.findAllTuitsByTopic);
             app.post("/api/topics/:topicid/tuits/:tuitid",TopicController.topicController.addTopicToTuit);
+            app.get("/api/topics/findtopicid/:topic",TopicController.topicController.findTopicId);
+            app.delete("/api/topics/removetuit/:ttid",TopicController.topicController.removeTopicFromTuit);
 
         }
         return TopicController.topicController;
@@ -45,4 +47,12 @@ export default class TopicController implements TopicControllerI {
     addTopicToTuit = (req: Request, res: Response) =>
         TopicController.topicDao.addTopicToTuit(req.params.tuitid, req.params.topicid)
             .then(status=>res.json(status));
+
+    removeTopicFromTuit = (req: Request, res: Response) =>
+        TopicController.topicDao.removeTopicFromTuit(req.params.ttid)
+            .then(status=>res.json(status));
+
+    findTopicId = (req: Request, res: Response) =>
+        TopicController.topicDao.findTopicId(req.params.topic)
+            .then(id=>res.json(id));
 };

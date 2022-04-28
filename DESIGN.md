@@ -33,7 +33,7 @@ A Bookmarks screen will be necessary for a better viewing experience of all the 
 
 **High-Level Architecture:**
 
-![](Aspose.Words.64498e0c-e42e-43a4-b34a-b5d5081653dc.001.jpeg)
+![](./HighLevel%20Diagram.jpeg)
 
 In our system, the user will be interacting with the application via a user interface. Apart from the already implemented components, UI will include components/screen for ‘User Login/Register’, Bookmarks and Explore. To fetch/manipulate data UI we will make HTTP calls to the backend. Each of these calls is routed through an Authentication Middleware which checks if the user making the HTTP call has proper authorization. Once authenticated, the call reaches the controllers- Users, Bookmarks, TopicTuits. Each of these controllers will include separate HTTP endpoints for each HTTP method. These controllers call specific DAO methods that interact with the database to fetch/manipulate the data.
 

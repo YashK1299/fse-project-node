@@ -55,4 +55,10 @@ export default class TopicDao implements TopicDaoI {
 
     addTopicToTuit = async (tuitid: string, topicid: string): Promise<any> =>
         TopicToTuitModel.create({topic:topicid,tuit:tuitid});
+
+    removeTopicFromTuit = async (ttid: string): Promise<any> =>
+        TopicToTuitModel.deleteOne({_id:ttid});
+
+    findTopicId = async (topic: string) : Promise<any> =>
+        TopicModel.find({topic:topic});
 }

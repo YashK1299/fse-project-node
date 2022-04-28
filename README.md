@@ -3,7 +3,7 @@ This repository is the implementation of the backend of the social media app Tui
 
 # Instructions to deploy Tuiter
 * Clone the node app repository from: https://github.com/YashK1299/fse-project-node
-* Create a .env file and add all the following environment variables to it:
+* Setup the following environment variables on heroku:
 1. DB_USERNAME
 2. DB_PASSWORD
 3. PORT
@@ -12,5 +12,5 @@ This repository is the implementation of the backend of the social media app Tui
 6. EXPRESS_SESSION_SECRET
 7. REACT_APP_BASE_URL
 * Clone the react app repository from: https://github.com/YashK1299/fse-project-react
-* Create a .env file similar to above and add all the following environment variables to it:
+* Setup the following environment variables on netlify:
 1. REACT_APP_BASE_URL
