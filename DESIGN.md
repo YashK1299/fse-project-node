@@ -37,7 +37,9 @@ A Bookmarks screen will be necessary for a better viewing experience of all the 
 
 In our system, the user will be interacting with the application via a user interface. Apart from the already implemented components, UI will include components/screen for ‘User Login/Register’, Bookmarks and Explore. To fetch/manipulate data UI we will make HTTP calls to the backend. Each of these calls is routed through an Authentication Middleware which checks if the user making the HTTP call has proper authorization. Once authenticated, the call reaches the controllers- Users, Bookmarks, TopicTuits. Each of these controllers will include separate HTTP endpoints for each HTTP method. These controllers call specific DAO methods that interact with the database to fetch/manipulate the data.
 
-**Work Breakdown and Schedule:** Initial Sprint Splits:
+**Work Breakdown and Schedule:** 
+
+### Initial Sprint Splits:
 
 Sprint 1: 1st April - 14 April Sprint 2: 15 April - 29 April
 
@@ -68,4 +70,4 @@ Sprint 1: 1st April - 14 April Sprint 2: 15 April - 29 April
 |23|Connecting UI for bookmarking tuits with backend API|4|Implementation|2|14, 16|Praguna|
 |24|Testing user flow for bookmarking tuits|4|Testing|2|23|Praguna|
 
-Final Sprints:
+### Final Sprints:
