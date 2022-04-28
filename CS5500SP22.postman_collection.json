@@ -1,0 +1,798 @@
+{
+	"info": {
+		"_postman_id": "c935101a-cf07-4321-b2a9-cae4f5978466",
+		"name": "CS5500SP22",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"bob\",\n    \"password\": \"bob123\",\n    \"email\": \"bob@marley.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create dummy user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"dummy\",\n    \"password\": \"dummy123\",\n    \"email\": \"dummy@nowhere.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"bobby\",\n    \"password\": \"bob123\",\n    \"email\": \"bob@marley.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"bobby\",\n    \"password\": \"bob123\",\n    \"email\": \"bob@marley.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b4aa6d6181d8fcb7c8f",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b4aa6d6181d8fcb7c8f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"bobby\",\n    \"password\": \"bob123\",\n    \"email\": \"bob@marley.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/api/users",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tuits",
+			"item": [
+				{
+					"name": "Find All Tuits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/tuits",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tuits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Tuit by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/tuits/6201d1dbf6be838c0c969262",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tuits",
+								"6201d1dbf6be838c0c969262"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Tuits by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/6201d071f6be838c0c96925b/tuits",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"6201d071f6be838c0c96925b",
+								"tuits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tuit for User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tuit\": \"bob's 2nd tuit\",\n    \"postedBy\":\"62144b1ca6d6181d8fcb7c8b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/tuits",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tuits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tuit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tuit\": \"bobs's first tuit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/tuits/62197ab6d2b5b2d2c8be7c72",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tuits",
+								"62197ab6d2b5b2d2c8be7c72"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tuit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"bobby\",\n    \"password\": \"bob123\",\n    \"email\": \"bob@marley.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/tuits/62197ab6d2b5b2d2c8be7c72",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tuits",
+								"62197ab6d2b5b2d2c8be7c72"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "likes",
+			"item": [
+				{
+					"name": "User Likes Tuit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/likes/6201d1a4f6be838c0c969260",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"likes",
+								"6201d1a4f6be838c0c969260"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Unlikes Tuit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/unlikes/6201d1dbf6be838c0c969262",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"unlikes",
+								"6201d1dbf6be838c0c969262"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Tuits Liked By User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/likes",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"likes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Users That Liked Tuit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/tuits/6201d1dbf6be838c0c969262/likes",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tuits",
+								"6201d1dbf6be838c0c969262",
+								"likes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Follows",
+			"item": [
+				{
+					"name": "User1 Follows User2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/follows/6201d0acf6be838c0c96925d",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"follows",
+								"6201d0acf6be838c0c96925d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User1 Unfollows User2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/unfollows/6201d0acf6be838c0c96925d",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"unfollows",
+								"6201d0acf6be838c0c96925d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Users Followed By User1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/following",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"following"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Users Following User2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/6201d0acf6be838c0c96925d/followedby",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"6201d0acf6be838c0c96925d",
+								"followedby"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "User1 Messages User2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\":\"Hello Worlds\",\n    \"from\":\"62144b1ca6d6181d8fcb7c8b\",\n    \"to\":\"6201d0acf6be838c0c96925d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/messages/send",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"messages",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User1 unsends message",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/messages/6219751780f957d260948ba8/delete",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"messages",
+								"6219751780f957d260948ba8",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Messages Sent By User1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/messages/62144b1ca6d6181d8fcb7c8b/sent",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"messages",
+								"62144b1ca6d6181d8fcb7c8b",
+								"sent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Messages Receoved by User2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/messages/6201d0acf6be838c0c96925d/received",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"messages",
+								"6201d0acf6be838c0c96925d",
+								"received"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bookmarks",
+			"item": [
+				{
+					"name": "User Bookmarks Tuit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/bookmarks/6201d1a4f6be838c0c969260",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"bookmarks",
+								"6201d1a4f6be838c0c969260"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Unlikes Tuit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/unbookmarks/6201d1a4f6be838c0c969260",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"unbookmarks",
+								"6201d1a4f6be838c0c969260"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Tuits Bookmarked By User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fse-node-a2-ankur.herokuapp.com/users/62144b1ca6d6181d8fcb7c8b/bookmarks",
+							"protocol": "https",
+							"host": [
+								"fse-node-a2-ankur",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"62144b1ca6d6181d8fcb7c8b",
+								"bookmarks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Topic",
+			"item": [
+				{
+					"name": "Get all topics",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get all topics Copy",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create topic",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add topic to tuit",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove topic from tuit",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find all tuits of topic",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Del Topic",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
